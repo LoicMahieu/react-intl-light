@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { IntlConfig, IntlShape } from '../types';
 import { DEFAULT_INTL_CONFIG, createError } from '../utils';
 import { formatMessage, formatHTMLMessage } from '../formatters/message';
@@ -48,6 +48,11 @@ export const intlContext = React.createContext<IntlShape>(
   })
 );
 
-export const IntlProvider = (props: OptionalIntlConfig) => (
-  <intlContext.Provider value={createIntl(props)} />
+export const IntlProvider = ({
+  children,
+  ...props
+}: OptionalIntlConfig & { children: ReactNode }) => (
+  <intlContext.Provider value={createIntl(props)}>
+    {children}
+  </intlContext.Provider>
 );

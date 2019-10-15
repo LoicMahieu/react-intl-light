@@ -13,10 +13,10 @@ export const FormattedMessage = <
   defaultMessage,
   children,
   tagName: Component,
-}: Props<V>) => {
+}: Props<V>): JSX.Element => {
   const intl = useIntl();
   const descriptor = { id, description, defaultMessage };
-  const message = intl.formatMessage(descriptor);
+  const message = intl.formatMessage(descriptor) || defaultMessage;
 
   if (typeof children === 'function') {
     return children(message);
@@ -28,7 +28,7 @@ export const FormattedMessage = <
     return React.createElement(Component, null, message);
   }
 
-  return message;
+  return <>{message}</>;
 };
 
 export interface Props<
@@ -36,5 +36,5 @@ export interface Props<
 > extends MessageDescriptor {
   values?: V;
   tagName?: React.ElementType<any>;
-  children?(...nodes: React.ReactNodeArray): React.ReactNode;
+  children?(message?: string): JSX.Element;
 }

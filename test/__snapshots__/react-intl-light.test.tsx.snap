@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`react-intl-light FormattedMessage with some messages 1`] = `
+Array [
+  <h1>
+    bim
+  </h1>,
+  <h1>
+    <span>
+      The message: 
+      bim2
+    </span>
+  </h1>,
+  <h1>
+    <span
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<span>bim3</span>",
+        }
+      }
+    />
+  </h1>,
+]
+`;
+
+exports[`react-intl-light FormattedMessage without any message 1`] = `
+Array [
+  <h1>
+    bar
+  </h1>,
+  <h1 />,
+  <h1>
+    <span>
+      The message: 
+      bar2
+    </span>
+  </h1>,
+  <h1>
+    <span
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<span>hello world</span>",
+        }
+      }
+    />
+  </h1>,
+]
+`;
+
+exports[`react-intl-light FormattedMessage without any message but defautlLocale is different 1`] = `
+Array [
+  <h1>
+    bar
+  </h1>,
+  <h1 />,
+  <h1>
+    <span>
+      The message: 
+      bar2
+    </span>
+  </h1>,
+  <h1>
+    <span
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<span>hello world</span>",
+        }
+      }
+    />
+  </h1>,
+]
+`;
+
+exports[`react-intl-light defineMessages works 1`] = `
+Object {
+  "foo": Object {
+    "defaultMessage": "bar",
+    "id": "foo",
+  },
+}
+`;

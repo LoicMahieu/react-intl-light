@@ -17,7 +17,7 @@ export const FormattedHTMLMessage = <
 }: Props<V>) => {
   const intl = useIntl();
   const descriptor = { id, description, defaultMessage };
-  const message = intl.formatHTMLMessage(descriptor);
+  const message = intl.formatHTMLMessage(descriptor) || defaultMessage;
 
   if (typeof children === 'function') {
     return children(message);
