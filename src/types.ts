@@ -1,5 +1,5 @@
 
-type PrimitiveType = string | number | boolean | null | undefined | Date;
+export type PrimitiveType = string | number | boolean | null | undefined | Date;
 
 export interface MessageDescriptor {
   id: string;
