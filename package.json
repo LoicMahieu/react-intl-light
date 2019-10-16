@@ -7,6 +7,11 @@
   "files": [
     "dist"
   ],
+  "description": "A ligter version of `react-intl` that only export formatMessage things.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loicmahieu/react-intl-light.git"
+  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
