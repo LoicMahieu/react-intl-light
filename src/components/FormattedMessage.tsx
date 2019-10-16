@@ -1,5 +1,5 @@
 import React from 'react';
-import useIntl from './useIntl';
+import { useIntl } from './useIntl';
 import { PrimitiveType, MessageDescriptor } from '../types';
 
 export const FormattedMessage = <

@@ -1,5 +1,5 @@
 import React from 'react';
-import useIntl from './useIntl';
+import { useIntl } from './useIntl';
 import { PrimitiveType } from '../types';
 import { Props } from './FormattedMessage';
 
