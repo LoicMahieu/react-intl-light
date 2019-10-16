@@ -10,7 +10,7 @@ type Messages<Names extends keyof any = string> = {
   [key in Names]: MessageDescriptor;
 };
 
-export default function defineMessages<Names extends keyof any>(
+export function defineMessages<Names extends keyof any>(
   messageDescriptors: Messages<Names>
 ) {
   // This simply returns what's passed-in because it's meant to be a hook for
