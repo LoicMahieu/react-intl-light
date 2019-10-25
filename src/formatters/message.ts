@@ -1,17 +1,14 @@
-
 // Since rollup cannot deal with namespace being a function,
 // this is to interop with TypeScript since `invariant`
 // does not export a default
 // https://github.com/rollup/rollup/issues/1267
 import * as invariant_ from 'invariant';
-const invariant: typeof invariant_.default = (invariant_ as any).default || invariant_;
 
-import {
-  IntlConfig,
-  MessageDescriptor,
-} from '../types';
+import { IntlConfig, MessageDescriptor } from '../types';
 
 import { createError } from '../utils';
+const invariant: typeof invariant_.default =
+  (invariant_ as any).default || invariant_;
 
 export function formatMessage(
   {
@@ -21,13 +18,9 @@ export function formatMessage(
     onError,
   }: Pick<
     IntlConfig,
-    | 'locale'
-    | 'messages'
-    | 'defaultLocale'
-    | 'onError'
-    | 'timeZone'
+    'locale' | 'messages' | 'defaultLocale' | 'onError' | 'timeZone'
   >,
-  messageDescriptor: MessageDescriptor = { id: '' },
+  messageDescriptor: MessageDescriptor = { id: '' }
 ): string {
   const { id, defaultMessage } = messageDescriptor;
 
@@ -57,14 +50,8 @@ export function formatMessage(
 }
 
 export function formatHTMLMessage(
-  config: Pick<
-    IntlConfig,
-    | 'locale'
-    | 'messages'
-    | 'defaultLocale'
-    | 'onError'
-  >,
-  messageDescriptor: MessageDescriptor = { id: '' },
+  config: Pick<IntlConfig, 'locale' | 'messages' | 'defaultLocale' | 'onError'>,
+  messageDescriptor: MessageDescriptor = { id: '' }
 ) {
   return formatMessage(config, messageDescriptor);
 }

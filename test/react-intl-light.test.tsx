@@ -1,7 +1,11 @@
 import * as React from 'react';
-import { IntlProvider, FormattedMessage, FormattedHTMLMessage } from '../src';
+import {
+  IntlProvider,
+  FormattedMessage,
+  FormattedHTMLMessage,
+  defineMessages,
+} from '../src';
 import renderer from 'react-test-renderer';
-import defineMessages from '../src/defineMessages';
 
 describe('react-intl-light', () => {
   describe('FormattedMessage', () => {

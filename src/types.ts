@@ -1,4 +1,3 @@
-
 export type PrimitiveType = string | number | boolean | null | undefined | Date;
 
 export interface MessageDescriptor {
@@ -65,10 +64,7 @@ export interface IntlFormatters {
   ): string;
   formatMessage(
     descriptor: MessageDescriptor,
-    values?: Record<
-      string,
-      PrimitiveType
-    >
+    values?: Record<string, PrimitiveType>
   ): string | React.ReactNodeArray;
   formatHTMLMessage(
     descriptor: MessageDescriptor,
