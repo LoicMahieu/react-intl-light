@@ -44,6 +44,8 @@ export function formatMessage(
         )
       );
     }
+    
+    return defaultMessage;
   }
 
   return message;
