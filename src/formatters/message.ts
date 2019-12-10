@@ -21,7 +21,7 @@ export function formatMessage(
     'locale' | 'messages' | 'defaultLocale' | 'onError' | 'timeZone'
   >,
   messageDescriptor: MessageDescriptor = { id: '' }
-): string {
+): string | undefined {
   const { id, defaultMessage } = messageDescriptor;
 
   // `id` is a required field of a Message Descriptor.
@@ -44,7 +44,7 @@ export function formatMessage(
         )
       );
     }
-    
+
     return defaultMessage;
   }
 
