@@ -61,13 +61,13 @@ export interface IntlFormatters {
   formatMessage(
     descriptor: MessageDescriptor,
     values?: Record<string, PrimitiveType>
-  ): string | undefined;
+  ): string;
   formatMessage(
     descriptor: MessageDescriptor,
     values?: Record<string, PrimitiveType>
-  ): string | undefined | React.ReactNodeArray;
+  ): string | React.ReactNodeArray;
   formatHTMLMessage(
     descriptor: MessageDescriptor,
     values?: Record<string, PrimitiveType>
-  ): string | undefined;
+  ): string;
 }
